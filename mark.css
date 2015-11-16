@@ -12,12 +12,7 @@ html,body{
 #mark-wrap{
 	width:334px;
 	height:auto;
-}
-
-#store-title{
-	height:30px;
-	line-height:30px;
-	text-align:center;
+	padding:8px;
 }
 
 input[type=input]{
@@ -26,22 +21,30 @@ input[type=input]{
 }
 
 .add-p{
-	margin-bottom:4px;
+	margin-bottom:6px;
 }
 
 #btn-p{
 	text-align:center;
 }
 
+
 input[type=button]{
 	color:#333333;
 	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"新宋体";
 	font-size:15px;
+	cursor:pointer;
 }
 
-#btn-mark{
-	margin-right:44px;
+#btn-delete{
+	margin-left:8px;
 }
+
+#btn-cancel{
+	margin-left:8px;
+}
+
+
 
 
 
