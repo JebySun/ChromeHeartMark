@@ -2,12 +2,12 @@
 
 #box-container {
     padding: 2px;
-    background-color: #B1FF3D;
+    background-color: #FFFFFF;
 }
 
 .box {
     float: left;
-    background-color: #FF6600;
+    background-color: #FF9900;
     margin: 2px;
 }
 
