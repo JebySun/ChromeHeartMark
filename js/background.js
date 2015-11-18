@@ -6,7 +6,14 @@
  */
 
 //打开浏览器时，更改默认浏览器首页。
-chrome.tabs.update({url:"home.html"});
+//据验证，打开浏览器的第一个tab的ID是2
+chrome.tabs.get(2, function(tab){
+	//不经过服务器直接打开本地文件
+	if (tab.url.indexOf("file:")!=0) {
+		chrome.tabs.update({url:"home.html"});
+	}
+});
+
 
 Bmob.initialize("6dd5862b3c27e3b644588d5fdd950f6c", "fb6fc3fbf86829ad2e5791efd8020ccd");
 

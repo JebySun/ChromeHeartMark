@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#box-container {
+    padding: 2px;
+    background-color: #B1FF3D;
+}
+
+.box {
+    float: left;
+    background-color: #FF6600;
+    margin: 2px;
+}
+
+.box:hover {
+    cursor: pointer;
+    animation: box-animate 0.6s;
+    -moz-animation: box-animate 0.6s;	/* Firefox */
+    -webkit-animation: box-animate 0.6s;	/* Safari 和 Chrome */
+    -o-animation: box-animate 0.6s;	/* Opera */
+}
+
+@-webkit-keyframes box-animate /* Safari 和 Chrome */
+{
+    to {
+        background: #B1FF3D;
+        transform:rotateX(180deg);
+    }
+}
+
+.cls {
+    clear: both;
+}

@@ -2,13 +2,13 @@
     "name": "网页云收藏",
     "version": "0.1.0",
 	"description": "同步收藏您喜欢的网页，通过标签方便的进行管理和查找。",
-	"icons": { "128": "logo_128.png" },
+	"icons": { "128": "img/logo_128.png" },
     "background" : {
-        "scripts": ["bmob-min.js", "background.js"]
+        "scripts": ["lib/bmob-min.js", "js/background.js"]
     },
 	"browser_action": {
-		"default_icon": "icon_heart_normal.png",
-		"default_title": "收藏网页",
+		"default_icon": "img/icon_heart_normal.png",
+		"default_title": "用心网页收藏",
 		"default_popup": "mark_popup.html"
 	},
 	"permissions": [    
