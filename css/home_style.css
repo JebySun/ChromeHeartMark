@@ -1,30 +1,41 @@
 @charset "utf-8";
 
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    font-size: 16px;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "新宋体";
+}
+
 #box-container {
+    position:relative;
+    width: 100%;
+    height: 100%;
     padding: 2px;
     background-color: #FFFFFF;
 }
 
 .box {
     float: left;
-    background-color: #FF9900;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
     margin: 2px;
+    font-size: 28px;
+    text-align: center;
+}
+.box>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #666666;
+    text-decoration:none;
 }
 
-.box:hover {
+.box>a:hover {
     cursor: pointer;
-    animation: box-animate 0.6s;
-    -moz-animation: box-animate 0.6s;	/* Firefox */
-    -webkit-animation: box-animate 0.6s;	/* Safari 和 Chrome */
-    -o-animation: box-animate 0.6s;	/* Opera */
-}
-
-@-webkit-keyframes box-animate /* Safari 和 Chrome */
-{
-    to {
-        background: #B1FF3D;
-        transform:rotateX(180deg);
-    }
+    color: #ff990e;
+    background-color: #d8ffab;
 }
 
 .cls {

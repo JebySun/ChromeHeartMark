@@ -5,6 +5,8 @@ $(function(){
     var boxWidthDefault = 240;
     var boxHeightDefault = 160;
     var marginWidth = 4;
+    var borderWidth = 2;
+    var scaleInt = boxHeightDefault/boxWidthDefault;
 
     /**
      * 根据网页宽度计算每个box的宽度
@@ -14,8 +16,12 @@ $(function(){
         var windowWidth = $(window).width();
         var docWidth = $(document).width();
         var num = Math.floor(windowWidth/boxWidthDefault);
-        var leftWidth = windowWidth-num*boxWidthDefault-(num+1)*marginWidth;
+        var leftWidth = windowWidth-num*boxWidthDefault-(num+1)*marginWidth-(num+1)*borderWidth;
         return boxWidthDefault + leftWidth/num;
+    };
+
+    var calBoxHeight = function(w) {
+        return w*scaleInt;
     };
 
     /**
@@ -23,7 +29,11 @@ $(function(){
      */
     var resizeBoxWidth = function() {
         var boxWidth = calBoxWidth();
-        $(".box").width(boxWidth).height(boxHeightDefault);
+        var boxHeigth = calBoxHeight(boxWidth);
+        //$(".box").width(boxWidth).height(boxHeightDefault);
+        $(".box").width(boxWidth).height(boxHeigth);
+        //$(".box").css("line-height", boxHeightDefault+"px");
+        $(".box").css("line-height", boxHeigth+"px");
     };
 
     /**
@@ -47,5 +57,8 @@ $(function(){
             $(box).css("background-color", "#B1FF3D").text("JavaScript");
         }, false);
     });
+
+
+    $("#box-container").perfectScrollbar();
 
 });
