@@ -4,7 +4,7 @@
 $(function(){
     var boxWidthDefault = 240;
     var boxHeightDefault = 160;
-    var marginWidth = 4;
+    var marginWidth = 14;
     var borderWidth = 2;
     var scaleInt = boxHeightDefault/boxWidthDefault;
 

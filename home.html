@@ -3,34 +3,53 @@
 <head>
 	<meta charset="utf-8" />
 	<title>专属主页</title>
-	<link href="lib/reset.css" rel="stylesheet" type="text/css"/>
-	<link href="lib/perfect-scrollbar.min.css" type="text/css" rel="stylesheet"/>
-	<link href="css/home_style.css" type="text/css" rel="stylesheet"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<link href="css/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="js/jBox/jBox.css" type="text/css" rel="stylesheet" />
+	<link href="js/jBox/themes/TooltipDark.css" type="text/css" rel="stylesheet" />
+	<link href="js/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" type="text/css" rel="stylesheet" />
+	<link href="css/perfect-scrollbar.min.css" type="text/css" rel="stylesheet"/>
+	<link href="css/home_style.css" type="text/css" rel="stylesheet" />
 	
-	<script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="lib/jquery.mousewheel.min.js"></script>
-	<script type="text/javascript" src="lib/perfect-scrollbar.jquery.min.js"></script>
-	<script type="text/javascript" src="js/home_script.js" ></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/perfect-scrollbar.jquery.min.js"></script>
+	<script type="text/javascript" src="js/jBox/jBox.min.js"></script>
+	<script type="text/javascript" src="js/noty/packaged/jquery.noty.packaged.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="js/home_index.js"></script>
+	<script type="text/javascript" src="js/home_boxsize_script.js"></script>
 </head>
 
 <body>
-    <div id="box-container">
-        <div class="box"><a href="http://www.baidu.com">百度</a></div>
-        <div class="box"><a href="http://www.163.com">网易</a></div>
-        <div class="box"><a href="http://www.taobao.com">淘宝</a></div>
-        <div class="box"><a href="http://www.jd.com">京东</a></div>
-        <div class="box"><a href="http://www.cnblogs.com">博客园</a></div>
-        <div class="box"><a href="http://www.oschina.net">开源中国</a></div>
-        <div class="box"><a href="http://www.csdn.net">CSDN</a></div>
-        <div class="box"><a href="http://www.jikexueyuan.com">极客学院</a></div>
-        <div class="box"><a href="http://www.jianshu.com">简书</a></div>
-        <div class="box"><a href="http://www.lofter.com">LOFTER</a></div>
-        <div class="box"><a href="http://www.1688.com">阿里巴巴</a></div>
-        <div class="box"><a href="http://www.360.com">360</a></div>   
-		<div class="box"><a href="http://www.lagou.com">拉钩</a></div>
+	
+	<div id="wrapper">
+		<div id="logo">用心收藏主页</div>
+		<div id="search-bar">
+			<div id="search-wrapper">
+				<p id="search-engine-switch">
+					<img id="engine" title="baidu" src="img/logo_baidu.png"/>
+					<i class="fa fa-sort-asc"></i>
+				</p>
+				<ul>
+					<li value="baidu"><img src="img/logo_baidu.png"/><span>百度</span></li>
+					<li value="google"><img src="img/logo_google.png"/><span>谷歌</span></li>
+				</ul>
+				<input id="search-input" type="text"/>
+				<input id="search-button" type="button" value="搜 索"/>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div id="box-container">
 
-        <div class="cls"></div>
-    </div>
+			<div class="box">
+				<a href="javascript:void(0);" class="new" title="添加网址">+</a>
+				<p><a href="javascript:void(0);" class="edit"><i class="fa fa-edit"></i></a><a href="javascript:void(0);" class="delete"><i class="fa fa-times"></i></a></p>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+	</div>	
 
 
 </body>

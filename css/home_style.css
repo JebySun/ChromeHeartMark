@@ -1,43 +1,235 @@
-@charset "utf-8";
+@CHARSET "UTF-8";
 
 html, body{
-    width: 100%;
-    height: 100%;
-    overflow:hidden;
-    font-size: 16px;
-    font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "新宋体";
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	font-size: 16px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "新宋体";
 }
 
-#box-container {
-    position:relative;
-    width: 100%;
-    height: 100%;
-    padding: 2px;
-    background-color: #FFFFFF;
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.clearfix{
+	clear:left;
 }
 
-.box {
-    float: left;
-    background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    margin: 2px;
-    font-size: 28px;
-    text-align: center;
+
+
+#wrapper{
+	position:relative;
+	width: 100%;
+	height: 100%;
+	margin:0px auto;
 }
-.box>a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #666666;
-    text-decoration:none;
+#logo{
+	width:500px;
+	height:50px;
+	margin:0px auto;
+	margin-top:30px;
+	line-height:50px;
+	text-align: center;
+	font-size:40px;
+	font-weight: bold;
 }
 
-.box>a:hover {
-    cursor: pointer;
-    color: #ff990e;
-    background-color: #d8ffab;
+#search-bar{
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+#search-wrapper{
+	width:680px;
+	height:36px;
+	margin:0px auto;
+	position: relative;
+}
+#search-engine-switch{
+	position:absolute;
+	width:50px;
+	height:36px;
+	left:16px;
+	cursor:pointer;
+}
+#engine {
+	width:26px;
+	position: absolute;
+	top:6px;
+	left:6px;
+}
+#search-engine-switch i{
+	position:absolute;
+	width:20px;
+	height:20px;
+	left:30px;
+	top:10px;
+	color:#666666;
+}
+#search-wrapper ul{
+	position: absolute;
+	left:16px;
+	top:38px;
+	list-style: none;
+	width:90px;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	background-color: #ffffff;
+	display: none;
+	z-index:2;
+}
+#search-wrapper ul li{
+	border-bottom:1px solid #cccccc;
+	height:26px;
+	line-height:26px;
+	vertical-align: middle;
+	text-align: left;
+	padding:5px;
+}
+#search-wrapper ul li:hover{
+	cursor:pointer;
+	background-color: #f4f4f4;
+}
+#search-wrapper ul li img{
+	height:26px;
+	vertical-align: middle;
+	margin-top:-4px;
+}
+#search-wrapper ul li span{
+	margin-left:4px;
+}
+#search-input{
+	border:1px solid #cccccc;
+	width:500px;
+	height:34px;
+	padding-left:50px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	color:#333333;
 }
 
-.cls {
-    clear: both;
+#search-button{
+	width:90px;
+	height:36px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+	font-size: 20px;
+	font-weight: bold;
+	border:none;	
+	background-color: #24292C;
+	color:#ffffff;
 }
+#search-button:hover{
+	background-color: #666666;
+	text-shadow:0px 0px 4px #ffffff;
+	cursor:pointer;
+}
+
+
+
+
+
+
+#box-container{
+	margin-bottom: 20px;
+	position:relative;
+	width: 100%;
+	height: 100%;
+}
+
+.box{
+	float:left;
+	border:1px solid #cccccc;
+	background-color: #f4f4f4;
+	margin-left:14px;
+	margin-bottom:14px;
+	text-align: center;
+	font-size:30px;
+	box-shadow:0px 4px 10px #999999;
+	position: relative;
+	z-index:1
+}
+
+.box:hover{
+	background-color:#ffffff;
+}
+.box>a{
+	display: block;
+	color:#666666;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	
+}
+.box>a:hover{
+	color:#000000;
+}
+.box p {
+	position: absolute;
+	top:0px;
+	right:0px;
+	display: none;
+}
+.box p a{
+	display:block;
+	float:left;
+	height:24px;
+	width:24px;
+	font-size:16px;
+	color:#666666;
+}
+.box p a:hover{
+	color:#000000;
+}
+.box p a i{
+	float:left;
+	margin-left:5px;
+	margin-top:5px;
+}
+
+
+/*弹出层表单*/
+#new-website{
+	width:460px;
+	height:224px;
+	text-align: center;
+	padding-top:40px;
+}
+#new-website>p{
+	width:100%;
+	height:30px;
+	margin-bottom:30px;
+}
+#new-website>p>label{
+	width:100px;
+	margin-right:10px;
+}
+#new-website>p>input[type=text]{
+	width:260px;
+	height:30px;
+}
+.button{
+	width:90px;
+	height:30px;
+	margin:0px 10px;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+	font-size:15px;
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
