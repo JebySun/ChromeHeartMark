@@ -9,17 +9,15 @@
 //据验证，打开浏览器的第一个tab的ID是2
 chrome.tabs.get(2, function(tab){
 	//不经过服务器直接打开本地文件
-	if (tab.url.indexOf("file:")!=0) {
+	if (tab.url.indexOf("file:") != 0) {
 		chrome.tabs.update({url:"home.html"});
 	}
 });
 
 
-Bmob.initialize("6dd5862b3c27e3b644588d5fdd950f6c", "fb6fc3fbf86829ad2e5791efd8020ccd");
-
 //新建标签页时，更改默认浏览器首页。
 chrome.tabs.onCreated.addListener(function(tab) {
-	if (tab.url=="chrome://newtab/") {
+	if (tab.url == "chrome://newtab/") {
 		chrome.tabs.update({url:"home.html"});		
 	}
 	chrome.browserAction.setIcon({path:"icon_heart_normal.png"});
@@ -27,9 +25,5 @@ chrome.tabs.onCreated.addListener(function(tab) {
 
 //切换标签页时
 chrome.tabs.onSelectionChanged.addListener(function(tabId, selectInfo) {
-	//...
 	chrome.browserAction.setIcon({path:"icon_heart.png", tabId:tabId});
 });
-
-//查询云端数据。
-//...
